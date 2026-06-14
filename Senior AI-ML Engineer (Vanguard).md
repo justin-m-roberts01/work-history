@@ -3,7 +3,7 @@
 
 
 
-**Focus Areas:** Generative AI Systems, Retrieval-Augmented Generation (RAG), Semantic Data Modeling, Conversational Analytics, Workforce Intelligence Automation, Enterprise AI Governance
+**Focus Areas:** Generative AI Systems, Retrieval-Augmented Generation (RAG), Semantic Data Modeling, Conversational Analytics, Workforce Intelligence Automation, Enterprise AI Governance, AI Product Strategy & Delivery Leadership
 
 ---
 
@@ -72,3 +72,70 @@ These tasks created operational drag:
 ##### 💻 Tech Stack
 
 `Python 3.13` • `Streamlit` • `AWS Bedrock (Claude Sonnet 3.5/4/4.5, Opus 4.1, Titan Embeddings)` • `Bedrock Knowledge Bases (RetrieveAndGenerate)` • `Bedrock Guardrails` • `AWS ECS Fargate` • `nginx (TLS termination)` • `boto3 / botocore` • `AWS STS Cross-Account AssumeRole` • `S3 with SSE-KMS` • `Okta OIDC` • `Dremio SQL` • `Prompt Engineering` • `Few-Shot Learning` • `Strategy Pattern / Intent Routing` • `SHA-256 Hashed Identity`
+
+---
+
+### 2. Agentic Analyst Platform — Enterprise GenAI Analytics Co-Pilots (Technical Lead + Product/Delivery Owner)
+
+*Led the design, productionization, and enterprise rollout of Vanguard's governed Agentic Analyst platform — a metadata-driven GenAI system that turns natural-language business questions into governed SQL-backed insights and visualizations — and stood up two production line-of-business implementations on it: the **Business Partner Virtual Analyst** for HR workforce analytics and the **Recruiting Virtual Analyst** for Talent Acquisition. This was a deliberate blend of hands-on architecture and end-to-end product/delivery ownership, spanning use-case definition, NPV/value modeling, AI governance approval, and cross-functional stakeholder management.*
+
+##### ⚙️ The Challenge & Business Context
+
+Across HR and Talent Acquisition, analytics delivery was bottlenecked. Recurring questions — *"What's time-to-fill for this division?"*, *"Show me workforce movement trends"*, *"How effective is this source?"* — funneled through a small set of analysts, producing **manual reporting cycles, inconsistent metric interpretations, and fragmented access to data, logic, and definitions**. HR Business Partners and recruiting leaders couldn't self-serve, and analysts were consumed by repetitive pulls instead of strategic work.
+
+The mandate was **not** to build a generic chatbot. It was to deliver an **analytics co-pilot grounded in enterprise data, business logic, and governance controls** — one that preserves data governance, metric consistency, and enterprise definitions while making self-service safe in a regulated environment. Beyond the engineering, the effort required **defining the use cases, quantifying the business case, and clearing Vanguard's AI governance gates** before anything could ship.
+
+##### 🧭 Product, Strategy & Delivery Leadership
+
+1. **End-to-End Use-Case Strategy & Question Taxonomy:** Synthesized ambiguous, fragmented business needs (delayed recruiting insights, inconsistent metric definitions) into clearly scoped GenAI use cases with measurable outcomes. Defined the **core question taxonomy** — pipeline/funnel health, time-to-fill, source effectiveness, requisition health, headcount, workforce movement & composition trends — that anchored both system design and the underlying data modeling. Aligned every use case to **HR DnA and Talent Acquisition OKRs** (efficiency, analytics adoption, decision speed) to ensure enterprise relevance.
+
+2. **Value Estimation & Multi-Year NPV Modeling:** Built a detailed **5-year NPV model for Recruiting Virtual Analyst that decomposed productivity savings across **seven distinct recruiting inquiry categories** (funnel & conversion, source/school/pipeline effectiveness, requisition health & aging, time-based process efficiency, workforce composition, hiring volume & demand, and in-development functionality). Layered in **persona-based cost-per-hour assumptions with 3% annual merit growth**, **YoY inquiry-growth curves** (20% near-term, tapering to 10%) tied to concrete demand drivers (India hiring ramp from 50 → ~1,700 hires by 2027, international site expansion, advice-business growth), and **adoption-adjusted time savings** for the HR DnA analyst pool. The model landed at an **NPV of ~$1.0M ($1,006,194)** — the artifact that secured stakeholder buy-in and funding.
+
+3. **AI Governance Approval (AIDP / SAR / PRA):** Drove the program through Vanguard's AI governance gates — **led preparation of AI divisional panel materials** (use-case narratives, risk summaries, system-workflow diagrams) and **coordinated the Security Architecture Review (SAR) and Privacy Risk Assessment (PRA)**. Designed and documented the core risk controls that made approval defensible: **metadata-only LLM interaction, aggregation-level query enforcement, prompt isolation, and enterprise AWS bedreock guardrails for PII and policy compliance.** For Recruiting VA, **reused previously approved BPVA artifacts** to materially accelerate sign-off.
+
+4. **Cross-Functional Stakeholder Management & Translation:** Operated as the **translator between business and technical domains**, partnering with HR Business Partners, recruiting leadership, data engineering, and enterprise risk/governance. Drove stakeholder alignment, adoption readiness, and governance compliance, and **supported onboarding of multi-region users and cross-functional HR teams** — with access governed by the underlying data permissions (e.g., Workday datasets).
+
+5. **Pilot → Production → Reuse Roadmap:** Shepherded the platform along an iterative path: early *Analyst Assistant* pilot foundations (SQL generation, code reuse, data discovery) → **BPVA productionization** as the first enterprise HR use case (establishing the architecture, governance model, and guardrails) → **RVA extension** reusing the same architecture with changes limited to datasets, personas, and domain logic. Ran pilot studies, testing workflows, and feedback loops to refine system performance and UX.
+
+##### 🛠️ Architectural Implementation
+
+1. **Metadata-Driven, Governed NL → SQL → Insight Pipeline:** Architected the end-to-end flow — *user prompt → LLM-orchestrated prompt chain → SQL generation → query execution against Athena-backed curated datasets → post-processing & explanation → structured output (tables, summaries, suggested follow-ups)* — enabling non-technical users to query enterprise data through natural language while every result stays grounded in approved data and definitions.
+
+2. **Semantic / Metadata Layer (Critical Design Element):** Designed the platform so the **LLM never sees raw records** — it reasons exclusively over **table schemas, column descriptions, business definitions, and metric formulas**. This metadata-first abstraction is what drives consistent, safe, explainable interpretations and is the cornerstone control that satisfied privacy review.
+
+3. **Multi-Step Prompt Chaining for Controlled Reasoning:** Contributed to a prompt-chaining design that decomposes complex analytical asks into safe, controlled sub-steps (intent/metric interpretation → query construction → result explanation), producing **explainable outputs with a retrieval explanation** and materially reducing hallucination risk.
+
+4. **Three-Layer Data Protection Strategy:** Implemented defense-in-depth — **(a) Data Abstraction** (LLM sees only metadata), **(b) Prompt Constraints** (queries restricted to aggregated insights, no row-level exposure), and **(c) Enterprise Guardrails** (PII blocking, toxicity filtering, policy compliance enforced at inference) — the exact control set documented for AIDP/SAR/PRA.
+
+5. **Manifest-Driven Multi-LOB Architecture (Reuse Engine):** Operationalized a **platform reuse strategy** so a new line of business is stood up via **manifest-driven configuration in S3** rather than re-engineering. Each LOB carries its own database, tables, prompt templates, metadata, and semantic files, with **role-based access control via SailPoint** governing who can reach which LOB. Extending BPVA → RVA collapsed to **re-pointing to new curated datasets (candidate + requisition tables) and onboarding new personas (recruiters, TA leaders)** — establishing a repeatable pattern for future Virtual Analyst use cases and additional LOBs.
+
+6. **Governed Self-Service Output Contract:** Standardized every response to return not just an answer but **metric definitions, the generated SQL/logic, the data table, a natural-language summary, an explanation of how the data was retrieved, and suggested follow-up questions** — combining chatbot UX with BI rigor so outputs are context-aware, explainable, and governed by construction.
+
+##### 📈 Impact & Business Value
+
+- **~$1.0M NPV Business Case (5-Year, 8% Discount Rate)** — Authored the RVA value model that projected a **net present value of $1,006,194**, with **non-discounted total benefit scaling from ~$197K in Year 1 to ~$321K by Year 5** against a rapidly amortizing build cost (~$57K in Year 1 falling to ~$6K by Year 5). Year 1 discounted net benefit alone reached **~$140K**, climbing to **~$232K by Year 5**.
+- **~850 → ~1,500 Analyst Hours Saved Annually (GTA)** — Quantified **846 hours saved in Year 1 growing to 1,487 hours by Year 5** across recruiting inquiry categories (funnel & conversion, source/pipeline effectiveness, requisition health, process efficiency, workforce composition, and hiring demand), translating to **$128K → $254K in GTA productivity savings** as recruiting demand scaled with the India hiring ramp and international expansion.
+- **~515 Adoption-Adjusted Hours/Year Returned to HR DnA Analysts** — On top of GTA savings, modeled **~515 adoption-adjusted hours saved annually** across new, veteran, and reporting analysts (~$63K–$69K/yr), shifting capacity from repetitive reporting toward strategic work.
+- **Governed Self-Service Analytics at Scale** — Replaced ad-hoc reporting cycles for HR Business Partners and recruiters with a single conversational surface that delivers **governed insights grounded in Vanguard data and analyst logic**, eliminating manual data pulls, reconciliation, and back-and-forth intake requests.
+- **Cleared Enterprise AI Governance** — Achieved **AIDP / SAR / PRA approval** for a generative-AI system operating on sensitive HR and recruiting data by designing the governance controls into the architecture (metadata-only interaction, aggregation-only queries, guardrails) — and accelerated RVA approval by reusing BPVA's approved artifacts.
+- **Multi-Domain Scalability Proven** — Extended the platform from HR (BPVA) to Recruiting (RVA) with **minimal reengineering**, validating a reusable, manifest-driven blueprint for onboarding additional lines of business and personas.
+
+##### 💻 Tech Stack
+
+`Python` • `AWS Bedrock (LLM Orchestration & Guardrails)` • `Amazon Athena` • `AWS Lambda` • `S3` • `Role-Based Access Control` • `Metadata / Semantic Layer Design` • `Multi-Step Prompt Chaining` • `Prompt Engineering` • `Enterprise AI Governance` • `Value Modeling` • `Streamlit`
+
+> **Role blend:** Technical Lead (architecture, semantic-layer & prompt-chain design, multi-LOB reuse engine) **and** Product/Delivery Owner (use-case strategy, question taxonomy, ~$1.0M NPV/value modeling, AIDP/SAR/PRA governance approval, and cross-functional stakeholder management).
+
+---
+
+## 🛠️ Summary Technical Proficiency Map
+
+| Category | Technologies & Tooling |
+| :--- | :--- |
+| **Generative AI / LLM Systems** | AWS Bedrock (Claude, Titan Embeddings), Bedrock Knowledge Bases, Bedrock Guardrails, Intent Routing, Strategy Pattern, Multi-Step Prompt Chaining |
+| **RAG & Semantic Grounding** | Category-Scoped Vector Retrieval, Semantic/Metadata Layer Design, Few-Shot Learning, Adaptive Prompt-Length Enforcement |
+| **Natural Language → SQL / Conversational Analytics** | Dremio SQL, Amazon Athena, Metric Definition Grounding, Explainable Query Generation |
+| **Cloud & Deployment** | AWS ECS Fargate, AWS Lambda, S3 |
+| **Security, Identity & Governance** | Okta OIDC, SailPoint Role Based Access Control, Bedrock Guardrails (PII/Toxicity/Policy), Enterprise AI Governance |
+| **Product & Delivery Leadership** | Use-Case Strategy, Question Taxonomy Definition, 5-Year NPV & Value Modeling, KPI Alignment, Risk Control Documentation, Cross-Functional Stakeholder Management, Pilot→Production→Reuse Roadmapping |
+| **MLOps & Telemetry** | Multi-Model Inference Profiles, Per-Env ARN Injection, Structured Feedback Taxonomy, Provenance Logging, Feedback-Driven Prompt Iteration |
