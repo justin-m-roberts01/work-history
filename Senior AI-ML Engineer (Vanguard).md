@@ -1,5 +1,5 @@
 # Senior AI/ML Engineer | Vanguard — Human Resources & Workforce Analytics
-**March 2026 – Present**  
+**February 2026 – Present**  
 
 
 
