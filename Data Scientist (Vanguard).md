@@ -1,5 +1,5 @@
 # Data Scientist | Vanguard — Regulatory Ops & Hyper-Personalization
-**August 2024 - February 2026**
+**August 2024 - January 2026**
 
 
 **Focus Areas:** Graph Neural Networks (GNN), Natural Language Processing (NLP), Multi-Task Deep Learning, Embedding Architectures, Regulatory Compliance Automation, Generative-AI-Powered Data Augmentation
