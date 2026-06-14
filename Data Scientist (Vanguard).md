@@ -6,9 +6,9 @@
 
 ---
 
-### Project Portfolio
+## Project Portfolio
 
-#### 1. Marketing History Graph Encoder & Aggregate Client Embeddings (Graph Neural Networks)
+### 1. Marketing History Graph Encoder & Aggregate Client Embeddings (Graph Neural Networks)
 *Architected a dual-stage Graph Neural Network pipeline that encodes complete client marketing impression histories into dense, temporally-aware embeddings powering Vanguard's "Next Best Action" Decision Engine.*
 
 ##### ⚙️ The Challenge & Business Context
@@ -67,7 +67,7 @@ The solution had to encode highly variable client interaction histories (single-
 
 ---
 
-#### 2. FINRA Regulatory Complaint Detection (NLP & Sequential Ensemble Modeling)
+### 2. FINRA Regulatory Complaint Detection (NLP & Sequential Ensemble Modeling)
 *Diagnosed semantic blind spots in a production RoBERTa text classifier and architected a precision-targeted secondary XGBoost ensemble that elevated regulatory complaint recall to 100% while simultaneously reducing false positives.*
 
 ##### ⚙️ The Challenge & Business Context
