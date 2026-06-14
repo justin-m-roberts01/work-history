@@ -1,16 +1,17 @@
-## Senior AI/ML Engineer | Vanguard — Human Resources & Workforce Analytics
-
+# Senior AI/ML Engineer | Vanguard — Human Resources & Workforce Analytics
 **March 2026 – Present**  
+
+
+
 **Focus Areas:** Generative AI Systems, Retrieval-Augmented Generation (RAG), Semantic Data Modeling, Conversational Analytics, Workforce Intelligence Automation, Enterprise AI Governance
 
 ---
 
+## Project Portfolio
 
-#### 1. Analyst Assistant — Multi-Intent Generative-AI Analytics Copilot for HR Teams (LLM Orchestration, RAG, Semantic Grounding)
+### 1. Analyst Assistant — Multi-Intent Generative-AI Analytics Copilot for HR Teams (LLM Orchestration, RAG, Semantic Grounding)
 
 *Architected and shipped an enterprise-grade, OIDC-authenticated AI copilot that classifies analyst intent across multiple task types and dynamically dispatches to specialized RAG pipelines grounded in Vanguard's HR data and code knowledge bases — accelerating ad-hoc HR analytics workflows across the organization.*
-
----
 
 ##### ⚙️ The Challenge & Business Context
 
@@ -21,8 +22,6 @@ These tasks created operational drag:
 - **Discovery overhead** — Analysts spent disproportionate time searching for the *right* table, column, or function before any analysis could begin.
 - **SQL authoring inconsistency** — Hand-written queries skipped business rules baked into the semantic layer (grade-level encoding, division/subdivision canonicalization), producing subtly incorrect headcount/attrition metrics.
 - **Hard regulatory & privacy constraints** — All compute had to run inside Vanguard's internal AWS estate, behind Okta OIDC, with hashed user identity, KMS-encrypted storage, and Bedrock Guardrails enforced on every LLM call.
-
----
 
 ##### 🛠️ Architectural Implementation
 
@@ -63,16 +62,12 @@ These tasks created operational drag:
 
 9. **Multi-Model Inference Profile Architecture:** Exposed **five Bedrock Application Inference Profiles** behind a user-selectable model toggle — Claude Sonnet 3.5 / 4 / 4.5, Opus 4.1, Titan Text Embeddings — with **per-env ARN injection**, enabling controlled rollout of new Anthropic releases through eng → test → prod without code changes.
 
----
-
 ##### 📈 Impact & Business Value
 
 - **End-to-End Analytics Acceleration** — Collapsed the most repetitive HR-analyst workflows (data discovery, code discovery, SQL authoring) into a single conversational surface, removing context-switching across documentation, code repos, and SQL editors.
 - **Semantic-Layer-Enforced Correctness** — By injecting Vanguard's grade/division/subdivision dictionaries and business-rule semantic layer into every prompt, generated SQL respects organizational metric definitions out of the box — eliminating a major class of subtle metric-calculation errors that plagued hand-written queries.
 - **Production-Hardened Safety Posture** — Zero raw user identifiers in storage, KMS encryption on every write, env-isolated Bedrock Guardrails, OIDC-enforced access, and refusal-on-harmful-request at the intent classifier itself — deployable into a regulated financial-services environment with no governance exceptions.
 - **Continuous-Improvement Telemetry** — Structured feedback (intent + retrieved context + downvote category) creates a closed-loop dataset directly mappable to specific handler/prompt iterations, enabling targeted prompt refinement rather than blind regeneration.
-
----
 
 ##### 💻 Tech Stack
 
