@@ -1,4 +1,4 @@
-# Senior AI/ML Engineer | Halff Associates 
+# AI/ML Engineer | Halff Associates 
 **Focus Areas:** Natural Language Processing (NLP), Predictive Analytics, Computer Vision & Deep Learning, Operations Automation  
 
 ---
