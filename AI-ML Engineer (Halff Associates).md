@@ -1,4 +1,7 @@
 # AI/ML Engineer | Halff Associates 
+**March 2023 - July 2024**
+
+
 **Focus Areas:** Natural Language Processing (NLP), Predictive Analytics, Computer Vision & Deep Learning, Operations Automation  
 
 ---
