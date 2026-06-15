@@ -45,15 +45,15 @@ Each document is a technical narrative—covering the challenge, the architectur
 </details>
 
 <details>
-<summary><strong>Marketing History Graph Neural Network</strong> — Client Interaction Encoding (GNN)</summary>
+<summary><strong>Marketing History Graph Neural Network & Embedding</strong> — Client Interaction Encoding (GNN)</summary>
 
 | | |
 | :--- | :--- |
-| **What** | Two-stage GNN pipeline encoding 500+ client marketing impressions into dense 128-dim embeddings powering offer personalization |
-| **Why** | XGBoost decision engine had no awareness of impression fatigue or temporal patterns; clients saw repeated offers, throttling engagement |
-| **How** | Bipartite graph (client ↔ impression nodes) + TransformerConv backbone (4-head attention) + cohort-aware adaptive aggregation (recency/frequency/diversity heads) + 8-task auxiliary supervision |
-| **Innovation** | Learned gated fusion mechanism dynamically blends attention with mean-pooling; stratified temporal sampling for high-engagement clients avoiding degenerate softmax collapse |
-| **Impact** | Unlocked new personalization dimension; improved decision engine feature space; validated across single-touch and 500+ impression cohorts |
+| **What** | Two-stage graph neural network pipeline, encoding complete client marketing impression histories (product offer, recency, frequency, outcome) into dense 128-dim embeddings, enabling the product recommendation engine to reason about offer personalization and impression fatigue |
+| **Why** | Existing recommendation engine had no awareness of impression frequency, recency, or temporal patterns; clients saw repeated offers, throttling engagement and wasting marketing spend |
+| **How** | Built a bipartite graph connecting clients to product offer impression events. First stage uses TransformerConv to learn encodings of individual product offer impression sequences → second stage adaptively aggregates those sequences into a single embedding per client |
+| **Innovation** | Learned gated fusion mechanism intelligently blends attention-based aggregation (effective for high-engagement clients with 100+ impressions) with mean-pooling (effective for single-touch clients); the model learns how much of each method to use based on impression count, eliminating the need to hand-tune separate models per cohort |
+| **Impact** | Unlocked new personalization dimension (impression fatigue awareness); improved decision engine feature space |
 
 </details>
 
