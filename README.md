@@ -23,8 +23,8 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | Gen AI copilot that classifies data analyst prompt intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery and sqk generation. |
-| **Why** | HR analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL, finding and modifying relevant code resources, aand discovering appropriate data tables and how to intersectionally leverage them. |
+| **What** | Gen AI copilot that classifies user (data analyst) prompt intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery and sqk generation. |
+| **Why** | HR data analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL, finding and modifying relevant code resources, aand discovering appropriate data tables and how to intersectionally leverage them. |
 | **How** | LLM routes user intent to the appropriate handler (discovery/SQL/code) + retrieves relevant context from knowledge base + dynamically injects business rules and data definitions into prompts |
 | **Innovation** | Embeds organizational hierarchies and data definitions directly into prompts, ensuring generated responses automatically respect governance without manual rule-writing |
 | **Impact** | Collapsed discovery/authoring workflows into a single conversational surface; eliminated context-switching; achieved ~40% operational time savings |
@@ -36,11 +36,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | Metadata-driven NL → SQL → insight pipeline that turns natural-language business questions into governed, auditable analytics without exposing raw data |
-| **Why** | Recruiting and HR teams faced bottlenecks in analytics delivery; questions like "time-to-fill by division?" or "workforce movement trends?" required weeks of ad-hoc reporting |
-| **How** | Multi-step prompt chaining (intent/metric interpretation → SQL generation → validation) + three-layer data protection (abstraction/constraints/aggregation-only) + manifest-driven multi-LOB reuse |
-| **Innovation** | Manifest-driven configuration engine: onboard a new business unit via S3 metadata rather than re-engineering; cleared enterprise AI governance (AIDP/SAR/PRA) by baking controls into architecture |
-| **Impact** | ~$1.0M NPV (5-year); 846–1,487 annual analyst hours saved; scaled from HR to recruiting with minimal re-engineering |
+| **What** | Enterprise analytics platform turning natural-language business questions into governed SQL queries, inisghts, and visualizations. As a strategic system this tool traces stakeholder questions to predefined proprietary metric definitions, generates auditable SQL with explanation, and surfaces both raw results and business-friendly summaries and visuals—enabling non-technical business leaders (recruiters, HR partners, finance stakeholders) to self-serve complex analytics |
+| **Why** | Talent Acquisition, HR, and Finance teams faced analytics bottlenecks; recurring questions like "time-to-fill by division?" or "workforce movement trends?" required weeks of ad-hoc analyst requests, delaying business decisions |
+| **How** | Multi-step prompt chaining (intent interpretation → metric mapping → SQL generation → validation) + four-layer data protection (AWS Guardrails/metadata abstraction/aggregation constraints/row-level filtering) + manifest-driven architecture for multi-line-of-business deployment |
+| **Innovation** | Translated ambiguous stakeholder knowledge into a reusable semantic layer (metric definitions, business rules, organizational hierarchies) that persists across queries; manifest-driven config lets new business units onboard via S3 metadata without re-engineering; governance controls baked into architecture|
+| **Impact** | ~$1.0M NPV (5-year); 846–1,487 annual analyst hours saved; reusable architecture enabling rapid expansion to new lines of business with minimal engineering overhead |
 
 </details>
 
