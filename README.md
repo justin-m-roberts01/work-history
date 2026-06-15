@@ -75,11 +75,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | Multi-modal predictive system combining asset telemetry, environmental variables, and fault history to forecast structural failures in subsurface utility pipes |
-| **Why** | Municipal utilities relied on reactive fixes or arbitrary schedules; every unplanned failure is expensive excavation + downtime |
-| **How** | Survival analysis (Random Survival Forest) for censored data handling + LightGBM regression for time-to-failure windows + back-dated target labeling for historical reconstruction |
-| **Innovation** | Integrated censored-data modeling (pipes that hadn't yet failed); stratified feature engineering across material/soil/environmental domains |
-| **Impact** | 93% accuracy within 30-month prediction window; $436K annual savings in targeted maintenance; optimized excavation scheduling |
+| **What** | Predictive system combining asset telemetry, environmental variables, and historical fault data to forecast structural failures in subsurface utility pipes, enabling proactive maintenance scheduling |
+| **Why** | Municipal utilities relied on reactive repairs or arbitrary maintenance schedules; unplanned failures are expensive (excavation + downtime) and disrupt service |
+| **How** | Survival analysis (Random Survival Forest) to handle censored data (pipes that haven't failed yet) + LightGBM regression to predict specific time-to-failure windows + back-dated historical reconstruction to generate training labels |
+| **Innovation** | Integrated censored-data modeling: natural handling of incomplete failure history; stratified feature engineering across material/soil/environmental domains ensures model learns environment-specific failure modes separately |
+| **Impact** | 93% accuracy within 30-month prediction window; $436K annual savings in targeted maintenance; optimized excavation scheduling reducing emergency repairs |
 
 </details>
 
@@ -88,11 +88,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | Multi-task neural network extracting structural metadata (stories, foundation type, finished floor height) from Google Street View imagery |
-| **Why** | Municipalities need spatial property attributes for land-use profiling and flood-risk assessment; manual surveying is expensive and time-consuming |
-| **How** | Sequential architecture: image + metadata → Story classifier → Foundation classifier → Floor Height regressor; each task feeds embeddings to downstream tasks for hierarchical feature reuse |
-| **Innovation** | Information gain loop: downstream tasks benefit from semantic abstractions learned by upstream classifiers, optimizing predictive power for high-value targets |
-| **Impact** | 60% reduction in field surveying costs; enabled automated flood-risk mapping and rapid real-estate categorization at scale |
+| **What** | Multi-task neural network extracting structural metadata (number of stories, foundation type, finished floor height) from Google Street View imagery and LIDAR Data, enabling automated land-use profiling and flood-risk assessment at municipal scale |
+| **Why** | Municipalities need detailed property attributes for accurate land-use profiles and flood-risk modeling; manual field surveying is expensive, time-consuming, and doesn't scale |
+| **How** | Sequential architecture chains three prediction tasks: image + metadata → Story classifier → Foundation classifier (using story predictions + metadata) → Finished Floor Height regressor prediction (using both prior predictions + metadata); each stage feeds learned embeddings to improve downstream accuracy |
+| **Innovation** | Information gain loop: downstream tasks benefit from semantic abstractions learned by upstream classifiers, progressively refining predictions toward the high-value target (finished floor height); eliminates need for separate single-task models |
+| **Impact** | 60% reduction in field surveying costs; enabled automated flood-risk mapping and rapid real-estate categorization at municipal scale |
 
 </details>
 
@@ -101,11 +101,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | Automated pipeline extracting, cleaning, and classifying a decade of unstructured contractor bid/cost data into a centralized, queryable database |
-| **Why** | Engineering teams wasted time parsing inconsistent PDFs/CSVs/Excel sheets; cost estimates lacked institutional historical context |
-| **How** | OCR ingestion (PDF/CSV/Excel parsing) → schema normalization → zero-shot semantic classification (Hugging Face transformers) → confidence-gated fallback for ambiguous items |
-| **Innovation** | Confidence-gated human-in-the-loop loop for low-confidence predictions, preserving data fidelity while scaling automation |
-| **Impact** | 3x faster cost estimate generation; centralized institutional cost intelligence; enabled engineers to leverage historical trends |
+| **What** | Automated pipeline standardizing 2 decades of unstructured contractor bid and cost data (PDFs, CSVs, Excel sheets) into a centralized, queryable database with consistent schema and semantic classifications |
+| **Why** | Engineering teams wasted time manually parsing inconsistent bid formats and vendor spreadsheets; cost estimates lacked institutional historical context, forcing redundant estimation work |
+| **How** | OCR extraction from PDFs → schema normalization across sources → zero-shot NLP classification of utilities and descriptions (Hugging Face transformers) → confidence-gated routing (high-confidence predictions auto-labeled, low-confidence sent to human review) |
+| **Innovation** | Confidence-gated human-in-the-loop fallback: only automate what the model is confident about; route ambiguous cases to annotators for labeling, gradually improving model accuracy while preserving data integrity |
+| **Impact** | 3x faster cost estimate generation; centralized institutional cost intelligence; enabled engineers to leverage historical trends for more accurate project planning; created data ready for other ML/GenAI usecases |
 
 </details>
 
