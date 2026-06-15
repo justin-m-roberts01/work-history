@@ -23,8 +23,8 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | Gen AI copilot that classifies analyst intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery and sqk generation. |
-| **Why** | HR analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL and discovering the right data tables |
+| **What** | Gen AI copilot that classifies data analyst prompt intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery and sqk generation. |
+| **Why** | HR analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL, finding and modifying relevant code resources, aand discovering appropriate data tables and how to intersectionally leverage them. |
 | **How** | LLM routes user intent to the appropriate handler (discovery/SQL/code) + retrieves relevant context from knowledge base + dynamically injects business rules and data definitions into prompts |
 | **Innovation** | Embeds organizational hierarchies and data definitions directly into prompts, ensuring generated responses automatically respect governance without manual rule-writing |
 | **Impact** | Collapsed discovery/authoring workflows into a single conversational surface; eliminated context-switching; achieved ~40% operational time savings |
