@@ -1,6 +1,6 @@
 # Justin Roberts | Senior AI/ML Engineer
 
-Welcome to my work portfolio! This repository documents my professional work experience in building data-driven systems that solve real business problems across sectors-from financial services to civil infrastructure optimization.
+Welcome to my work portfolio! This repository documents my professional work experience building data-driven systems that solve real business problems across sectors-from financial services to civil infrastructure optimization.
 
 ---
 
@@ -54,7 +54,7 @@ Each document is a technical narrative—covering challenges, architecture, and 
 | **What** | Two-stage graph neural network pipeline that encodes complete marketing campaign histories (product offers, recency, frequency, outcomes) into dense 128-dimension embeddings for each client. Supplying Vanguard product recommendation engines with additional reasoning capability for offer personalization, impression fatigue awareness, and temporally aware reccomndations |
 | **Why** | Existing product recommendation engines had no awareness of individual clients marketing campaign history (frequency, recency, or temporal patterns); clients saw repeated offers, throttling engagement and wasting marketing spend |
 | **How** | Built a bipartite graph connecting clients to their marketing campaign histories. First stage uses TransformerConv to learn encodings of individual campaign event sequences → Second stage adaptively aggregates campaign sequences into a single embedding for each client |
-| **Innovation** | Trained a gated fusion mechanism to intelligently blend attention-based aggregation (effective for high-engagement clients with 100+ campaign impressions) with mean-pooling (effective for single-campaign impression clients); the model learns how much of each method to use based on  count of campaigns a client has been exposed to, eliminating the need to hand-tune separate models  |
+| **Innovation** | Trained a gated fusion mechanism to intelligently blend attention-based history aggregation (effective for high-engagement clients with 100+ campaign impressions) with mean-pooling aggregation (effective for single-campaign impression clients); the model learns how much of each method to use based on the count of campaigns a client has been exposed to. Eliminating need to hand-tune separate models  |
 | **Impact** | Unlocked new personalization dimension (impression fatigue awareness); improved Vanguard product reccomndation engine feature space |
 
 </details>
@@ -66,7 +66,7 @@ Each document is a technical narrative—covering challenges, architecture, and 
 | :--- | :--- |
 | **What** | RoBERTa primary classifier + XGBoost 'second opinion' model designed to accurately classify potential falely negative classified inputs to the primary classifier, achieving 100% recall on regulatory complaints |
 | **Why** | Primary RoBERTa classifier had 97% recall; missing even 1 complaint per month creates FINRA reporting gaps and serious regulatory risk |
-| **How** | Diagnosed false-negative patterns using PCA + Andrews Curves visualizations of labeled text embeddings → identified the specific prediction range (*False Negative Risk Range*) and semantic patterns of false negative outputs from the primary model → Using semantic features (syntactic/topic/keyword signals) I trained an XGBoost classifier as a "second opinion" model specialized in accurate classification of potential False negative outputs from the primary model  → routed predictions through both classifiers for second opinion when appropriate |
+| **How** | Diagnosed false-negative patterns using PCA + Andrews Curves visualizations of labeled text embeddings → identified the specific prediction range (*False Negative Risk Range*) and semantic patterns of false negative outputs coming from the primary RoBERTa model → Using semantic features (syntactic/topic/keyword signals) I trained an XGBoost classifier as a "second opinion" model specialized in accurate classification of potential False negative outputs from the primary RoBERTa model  → routed predictions through both classifiers for second opinion when appropriate |
 | **Innovation** | Generated synthetic cases using LLM augmentation and adversarial perturbations (typos, noise, edge cases) to teach the second opinion model robustness on complaint patterns the primary model struggled with; Zero retraining of production RoBERTa |
 | **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor |
 
