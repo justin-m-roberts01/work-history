@@ -16,13 +16,70 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 ---
 
-## 📋 Summary of Work
+## 📋 Project Highlights
 
-**At Vanguard**, I've designed and shipped enterprise-grade generative AI systems that bridge engineering and business strategy. Most recently, I architected the **Analyst Assistant**—a multi-intent RAG copilot serving HR teams at scale with OIDC authentication, semantic grounding, and production safety guardrails. Before that, I led the **Agentic Analyst Platform** from strategy through governance approval, authoring a ~$1M NPV business case and operationalizing a metadata-driven analytics system that turns natural language into governed insights. Earlier in my Data Scientist role, I built a **Graph Neural Network pipeline** that encodes complete client marketing histories into dense embeddings (unlocking personalization for a financial decision engine) and architected an **NLP ensemble** that achieved 100% recall on regulatory complaints while cutting false positives and operational costs.
+### **Analyst Assistant** — Multi-Intent Generative-AI Copilot for HR Analytics
+| | |
+| :--- | :--- |
+| **What** | OIDC-authenticated LLM copilot that classifies analyst intent and routes to specialized RAG pipelines grounded in Vanguard's semantic data layer |
+| **Why** | HR analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL and discovering the right data tables |
+| **How** | Strategy-pattern dispatch layer + Bedrock RAG with category-scoped retrieval + dynamic semantic/metric layer injection + adaptive prompt-length enforcement |
+| **Innovation** | Semantic layer-aware prompt composition baking in business rules, grade dictionaries, and organizational hierarchies to ensure generated SQL respects governance |
+| **Impact** | Collapsed discovery/authoring workflows into a single conversational surface; eliminated context-switching; achieved ~40% operational time savings |
 
-**At Halff Associates**, I owned the full ML lifecycle across diverse domains—deploying **predictive survival models** for municipal utility infrastructure that identified failures before they occur (93% accuracy, $436K annual savings), building **computer vision networks** that automated property attribute extraction from imagery (60% cost reduction), designing **NLP pipelines** that standardized a decade of unstructured cost documentation, and prototyping **reinforcement learning systems** for route optimization.
+### **Agentic Analyst Platform** — Governed GenAI Analytics System (Technical Lead + Product Owner)
+| | |
+| :--- | :--- |
+| **What** | Metadata-driven NL → SQL → insight pipeline that turns natural-language business questions into governed, auditable analytics without exposing raw data |
+| **Why** | Recruiting and HR teams faced bottlenecks in analytics delivery; questions like "time-to-fill by division?" or "workforce movement trends?" required weeks of ad-hoc reporting |
+| **How** | Multi-step prompt chaining (intent/metric interpretation → SQL generation → validation) + three-layer data protection (abstraction/constraints/aggregation-only) + manifest-driven multi-LOB reuse |
+| **Innovation** | Manifest-driven configuration engine: onboard a new business unit via S3 metadata rather than re-engineering; cleared enterprise AI governance (AIDP/SAR/PRA) by baking controls into architecture |
+| **Impact** | ~$1.0M NPV (5-year); 846–1,487 annual analyst hours saved; scaled from HR to recruiting with minimal re-engineering |
 
-Across all roles, the pattern is consistent: **define the problem rigorously, architect solutions that scale, measure impact quantitatively, and deliver systems production-hardened for enterprise use.**
+### **Marketing History Graph Neural Network** — Client Interaction Encoding (GNN)
+| | |
+| :--- | :--- |
+| **What** | Two-stage GNN pipeline encoding 500+ client marketing impressions into dense 128-dim embeddings powering offer personalization |
+| **Why** | XGBoost decision engine had no awareness of impression fatigue or temporal patterns; clients saw repeated offers, throttling engagement |
+| **How** | Bipartite graph (client ↔ impression nodes) + TransformerConv backbone (4-head attention) + cohort-aware adaptive aggregation (recency/frequency/diversity heads) + 8-task auxiliary supervision |
+| **Innovation** | Learned gated fusion mechanism dynamically blends attention with mean-pooling; stratified temporal sampling for high-engagement clients avoiding degenerate softmax collapse |
+| **Impact** | Unlocked new personalization dimension; improved decision engine feature space; validated across single-touch and 500+ impression cohorts |
+
+### **FINRA Regulatory Complaint Detector** — NLP Ensemble for Perfect Compliance
+| | |
+| :--- | :--- |
+| **What** | RoBERTa-based primary classifier + XGBoost secondary ensemble targeting false negatives, achieving 100% recall on regulatory complaints |
+| **Why** | Production classifier had 97% recall; missing even 1 complaint per month creates FINRA reporting gaps and regulatory risk |
+| **How** | PCA + Andrews Curves diagnosis of false-negative patterns → 50-feature semantic extraction (syntactic/semantic/topic/keyword signals) → recursive feature elimination → confidence-gated secondary routing |
+| **Innovation** | Generative data augmentation (LLM + synthetic oversampling + adversarial perturbation suite); long-text remediation (split-and-max scoring for 70+ word texts) |
+| **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor; zero retraining risk (secondary model only) |
+
+### **Utility Pipe Failure Prediction** — Survival Analysis for Infrastructure Maintenance
+| | |
+| :--- | :--- |
+| **What** | Multi-modal predictive system combining asset telemetry, environmental variables, and fault history to forecast structural failures in subsurface utility pipes |
+| **Why** | Municipal utilities relied on reactive fixes or arbitrary schedules; every unplanned failure is expensive excavation + downtime |
+| **How** | Survival analysis (Random Survival Forest) for censored data handling + LightGBM regression for time-to-failure windows + back-dated target labeling for historical reconstruction |
+| **Innovation** | Integrated censored-data modeling (pipes that hadn't yet failed); stratified feature engineering across material/soil/environmental domains |
+| **Impact** | 93% accuracy within 30-month prediction window; $436K annual savings in targeted maintenance; optimized excavation scheduling |
+
+### **Property Type Attribute Extraction** — Multi-Task Sequential Deep Learning with Computer Vision
+| | |
+| :--- | :--- |
+| **What** | Multi-task neural network extracting structural metadata (stories, foundation type, finished floor height) from Google Street View imagery |
+| **Why** | Municipalities need spatial property attributes for land-use profiling and flood-risk assessment; manual surveying is expensive and time-consuming |
+| **How** | Sequential architecture: image + metadata → Story classifier → Foundation classifier → Floor Height regressor; each task feeds embeddings to downstream tasks for hierarchical feature reuse |
+| **Innovation** | Information gain loop: downstream tasks benefit from semantic abstractions learned by upstream classifiers, optimizing predictive power for high-value targets |
+| **Impact** | 60% reduction in field surveying costs; enabled automated flood-risk mapping and rapid real-estate categorization at scale |
+
+### **Material Cost Classification & Database** — NLP Pipeline for Unstructured Data Standardization
+| | |
+| :--- | :--- |
+| **What** | Automated pipeline extracting, cleaning, and classifying a decade of unstructured contractor bid/cost data into a centralized, queryable database |
+| **Why** | Engineering teams wasted time parsing inconsistent PDFs/CSVs/Excel sheets; cost estimates lacked institutional historical context |
+| **How** | OCR ingestion (PDF/CSV/Excel parsing) → schema normalization → zero-shot semantic classification (Hugging Face transformers) → confidence-gated fallback for ambiguous items |
+| **Innovation** | Confidence-gated human-in-the-loop loop for low-confidence predictions, preserving data fidelity while scaling automation |
+| **Impact** | 3x faster cost estimate generation; centralized institutional cost intelligence; enabled engineers to leverage historical trends |
 
 ---
 
