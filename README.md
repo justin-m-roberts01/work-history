@@ -1,12 +1,12 @@
 # Justin Roberts | Senior AI/ML Engineer
 
-Welcome to my work portfolio! This repository documents my professional work building data-driven systems that solve real business problems across sectors-from financial services to civil infrastructure optimization.
+Welcome to my work portfolio! This repository documents my professional work experience in building data-driven systems that solve real business problems across sectors-from financial services to civil infrastructure optimization.
 
 ---
 
 ## 🎯 What You'll Find Here
 
-This repository contains detailed documentation of projects I've led across my current and previous positions:
+This repository contains detailed documentation of projects I've led across my current and previous roles:
 
 1. **[Senior AI/ML Engineer @ Vanguard](./Senior%20AI-ML%20Engineer%20(Vanguard).md)** (2026–Present) — Building enterprise AI systems for HR and workforce analytics
 2. **[Data Scientist @ Vanguard](./Data%20Scientist%20(Vanguard).md)** (2024–2026) — Designing neural networks and NLP systems for marketing personalization and compliance
@@ -18,18 +18,18 @@ Each document is a technical narrative—covering challenges, architecture, and 
 
 ## 📋 Project Summaries and Highlights
 
-*Use the dropdown buttons below to see a quick synopsis of each project. For the full scope of work in each role, click through to the detailed role documentation above.*
+*Use the dropdown buttons below to see a brief synopsis of each project. For the full scope of work for each role/project, click through to the detailed role documentation above.*
 
 <details>
 <summary><strong>Analyst Assistant</strong> — Multi-Intent Generative-AI Copilot for HR Analytics</summary>
 
 | | |
 | :--- | :--- |
-| **What** | Gen AI copilot that classifies user (data analyst) prompt intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery, and sql generation. |
-| **Why** | HR data analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL, finding and modifying relevant code resources, and discovering appropriate data tables and how to intersectionally leverage them. |
-| **How** | LLM routes user intent to the appropriate handler (discovery/SQL/code) + retrieves relevant context from knowledge base + dynamically injects business rules and data definitions into prompts |
+| **What** | Gen AI copilot that classifies users (HR data analysts) prompt intent and routes to specialized RAG pipelines grounded in contextual business data. Performs code discovery, code modification, data discovery, and sql generation |
+| **Why** | HR data analysts spent 40%+ of their time on repetitive translation work: converting ambiguous questions into valid SQL, finding/modifying relevant code resources, discovering appropriate data tables, and strategizing how to leverage data tables |
+| **How** | LLM routes user intent to the appropriate handler (data discovery/SQL/code generation) + handler retrieves relevant context from knowledge base + dynamically injects business rules and data definitions into prompts |
 | **Innovation** | Embeds organizational hierarchies and data definitions directly into prompts, ensuring generated responses automatically respect governance without manual rule-writing |
-| **Impact** | Collapsed discovery/authoring workflows into a single conversational surface; eliminated context-switching; achieved ~40% operational time savings |
+| **Impact** | Collapsed data discovery, code discovery, and code generation worfklows into a single conversational surface; achieved ~27% operational time savings |
 
 </details>
 
@@ -38,37 +38,37 @@ Each document is a technical narrative—covering challenges, architecture, and 
 
 | | |
 | :--- | :--- |
-| **What** | Enterprise analytics platform turning natural-language business questions into governed SQL queries, insights, and visualizations. As a strategic system, this tool traces stakeholder questions to predefined proprietary metric definitions, generates auditable SQL with explanations, surfaces raw results, surfaces and business-friendly summaries, and creates visuals that enabling non-technical business leaders (recruiters, HR partners, finance stakeholders) to self-serve complex analytics |
-| **Why** | Talent Acquisition, HR, and Finance teams faced analytics bottlenecks; recurring questions like "time-to-fill by division?" or "workforce movement trends?" required weeks of ad-hoc analyst requests, delaying business decisions |
+| **What** | Enterprise analytics platform that turns natural-language business questions into governed SQL queries, data insights, and visualizations. As a strategic system, this tool traces stakeholder questions to predefined proprietary metric definitions, generates auditable SQL with explanations, surfaces raw data results, generates business-friendly summaries, and creates visuals that enable non-technical business leaders (recruiters, HR partners, finance stakeholders) to self-serve complex analytics |
+| **Why** | Talent Acquisition, HR, and Finance teams faced analytics bottlenecks; recurring questions like "time-to-fill by division?" or "workforce movement trends?" required weeks of ad-hoc analyst work, delaying business decisions |
 | **How** | Multi-step prompt chaining (intent interpretation → metric mapping → SQL generation → validation) + four-layer data protection (AWS Guardrails/metadata abstraction/aggregation constraints/row-level filtering) |
-| **Innovation** | Translated ambiguous stakeholder knowledge into a reusable semantic layer (metric definitions, business rules, organizational hierarchies) that persists across queries; manifest-driven configuration lets new business units onboard via S3 metadata without re-engineering; governance controls baked into architecture|
-| **Impact** | ~$1.0M NPV (5-year); 846–1,487 annual analyst hours saved; reusable architecture enabling rapid expansion to new lines of business with minimal engineering overhead |
+| **Innovation** | Translated decentralized business knowledge into a reusable semantic information (metric definitions, business rules, organizational hierarchies) that persists across queries; manifest-driven configuration lets new business units onboard via S3 metadata without re-engineering; governance controls baked into architecture|
+| **Impact** | ~$1.0M NPV (5-year); 846 annual analyst hours saved; reusable architecture enabling rapid expansion to new lines of business with minimal engineering overhead |
 
 </details>
 
 <details>
-<summary><strong>Marketing History Graph Neural Network & Embedding</strong> — Client Interaction Encoding (GNN)</summary>
+<summary><strong>Marketing Campaign Graph Neural Network & Embedding Generation</strong> — Marketing Campaign Touch-point Encoding</summary>
 
 | | |
 | :--- | :--- |
-| **What** | Two-stage graph neural network pipeline, encoding complete client marketing impression histories (product offer, recency, frequency, outcome) into dense 128-dim embeddings, enabling the product recommendation engine to reason about offer personalization and impression fatigue |
-| **Why** | Existing recommendation engine had no awareness of impression frequency, recency, or temporal patterns; clients saw repeated offers, throttling engagement and wasting marketing spend |
-| **How** | Built a bipartite graph connecting clients to product offer impression events. First stage uses TransformerConv to learn encodings of individual product offer impression sequences → second stage adaptively aggregates those sequences into a single embedding per client |
-| **Innovation** | Learned gated fusion mechanism intelligently blends attention-based aggregation (effective for high-engagement clients with 100+ impressions) with mean-pooling (effective for single-touch clients); the model learns how much of each method to use based on impression count, eliminating the need to hand-tune separate models per cohort |
-| **Impact** | Unlocked new personalization dimension (impression fatigue awareness); improved decision engine feature space |
+| **What** | Two-stage graph neural network pipeline that encodes complete marketing campaign histories (product offers, recency, frequency, outcomes) into dense 128-dimension embeddings for each client. Supplying Vanguard product recommendation engines with additional reasoning capability for offer personalization, impression fatigue awareness, and temporally aware reccomndations |
+| **Why** | Existing product recommendation engines had no awareness of individual clients marketing campaign history (frequency, recency, or temporal patterns); clients saw repeated offers, throttling engagement and wasting marketing spend |
+| **How** | Built a bipartite graph connecting clients to their marketing campaign histories. First stage uses TransformerConv to learn encodings of individual campaign event sequences → Second stage adaptively aggregates campaign sequences into a single embedding for each client |
+| **Innovation** | Trained a gated fusion mechanism to intelligently blend attention-based aggregation (effective for high-engagement clients with 100+ campaign impressions) with mean-pooling (effective for single-campaign impression clients); the model learns how much of each method to use based on  count of campaigns a client has been exposed to, eliminating the need to hand-tune separate models  |
+| **Impact** | Unlocked new personalization dimension (impression fatigue awareness); improved Vanguard product reccomndation engine feature space |
 
 </details>
 
 <details>
-<summary><strong>FINRA Regulatory Complaint Detector</strong> — NLP Ensemble for Perfect Compliance</summary>
+<summary><strong>FINRA Regulatory Complaint Detection</strong> — NLP Ensemble for Perfect Compliance</summary>
 
 | | |
 | :--- | :--- |
-| **What** | RoBERTa primary classifier + XGBoost secondary ensemble targeting known false negative range from primary classifier, achieving 100% recall on regulatory complaints |
-| **Why** | Production classifier had 97% recall; missing even 1 complaint per month creates FINRA reporting gaps and serious regulatory risk |
-| **How** | Diagnosed false-negative patterns using PCA + Andrews Curves visualization on primary classifier training daata embeddings → identified the specific confidence range where misses (false negative) occurred → trained XGBoost as a "second opinion" model on that borderline range, using 50 semantic features (syntactic/topic/keyword signals) → routed uncertain predictions through both classifiers for validation |
-| **Innovation** | Generated synthetic hard cases using LLM augmentation and adversarial perturbations (typos, noise, edge cases) to teach the secondary model robustness on complaint patterns the primary model struggled with; built this as an additional layer. zero retraining of production RoBERTa |
-| **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor; zero risk to production systems (secondary model only) |
+| **What** | RoBERTa primary classifier + XGBoost 'second opinion' model designed to accurately classify potential falely negative classified inputs to the primary classifier, achieving 100% recall on regulatory complaints |
+| **Why** | Primary RoBERTa classifier had 97% recall; missing even 1 complaint per month creates FINRA reporting gaps and serious regulatory risk |
+| **How** | Diagnosed false-negative patterns using PCA + Andrews Curves visualizations of labeled text embeddings → identified the specific prediction range (*False Negative Risk Range*) and semantic patterns of false negative outputs from the primary model → Using semantic features (syntactic/topic/keyword signals) I trained an XGBoost classifier as a "second opinion" model specialized in accurate classification of potential False negative outputs from the primary model  → routed predictions through both classifiers for second opinion when appropriate |
+| **Innovation** | Generated synthetic cases using LLM augmentation and adversarial perturbations (typos, noise, edge cases) to teach the second opinion model robustness on complaint patterns the primary model struggled with; Zero retraining of production RoBERTa |
+| **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor |
 
 </details>
 
