@@ -1,6 +1,6 @@
 # Justin Roberts | Senior AI/ML Engineer
 
-Welcome to my work portfolio. This repository documents my professional work building data-driven systems that solve real business problems—from financial services to civil infrastructure optimization.
+Welcome to my work portfolio! This repository documents my professional work building data-driven systems that solve real business problems across sectors-from financial services to civil infrastructure optimization.
 
 ---
 
@@ -8,23 +8,25 @@ Welcome to my work portfolio. This repository documents my professional work bui
 
 This repository contains detailed documentation of projects I've led across my current and previous positions:
 
-1. **[Senior AI/ML Engineer at Vanguard](./Senior%20AI-ML%20Engineer%20(Vanguard).md)** — Building enterprise AI systems for HR and workforce analytics
-2. **[Data Scientist at Vanguard](./Data%20Scientist%20(Vanguard).md)** — Designing neural networks and NLP systems for marketing personalization and compliance
-3. **[AI/ML Engineer at Halff Associates](./AI-ML%20Engineer%20(Halff%20Associates).md)** — End-to-end ML systems for infrastructure, real estate, and land-use surveying operations
+1. **[Senior AI/ML Engineer at Vanguard](./Senior%20AI-ML%20Engineer%20(Vanguard).md)** (2026–Present) — Building enterprise AI systems for HR and workforce analytics
+2. **[Data Scientist at Vanguard](./Data%20Scientist%20(Vanguard).md)** (2024–2026) — Designing neural networks and NLP systems for marketing personalization and compliance
+3. **[AI/ML Engineer at Halff Associates](./AI-ML%20Engineer%20(Halff%20Associates).md)** (2023–2024) — End-to-end ML systems for infrastructure, real estate, and land-use surveying operations
 
-Each document is a technical narrative—covering the challenge, the architecture, and the measurable business impact.
+Each document is a technical narrative—covering challenges, architecture, and the measurable business impact.
 
 ---
 
 ## 📋 Project Summaries and Highlights
+
+*Use the dropdown buttons below to see a quick synopsis of each project. For the full scope of work in each role, click through to the detailed role documentation above.*
 
 <details>
 <summary><strong>Analyst Assistant</strong> — Multi-Intent Generative-AI Copilot for HR Analytics</summary>
 
 | | |
 | :--- | :--- |
-| **What** | Gen AI copilot that classifies user (data analyst) prompt intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery and sqk generation. |
-| **Why** | HR data analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL, finding and modifying relevant code resources, aand discovering appropriate data tables and how to intersectionally leverage them. |
+| **What** | Gen AI copilot that classifies user (data analyst) prompt intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery, and sql generation. |
+| **Why** | HR data analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL, finding and modifying relevant code resources, and discovering appropriate data tables and how to intersectionally leverage them. |
 | **How** | LLM routes user intent to the appropriate handler (discovery/SQL/code) + retrieves relevant context from knowledge base + dynamically injects business rules and data definitions into prompts |
 | **Innovation** | Embeds organizational hierarchies and data definitions directly into prompts, ensuring generated responses automatically respect governance without manual rule-writing |
 | **Impact** | Collapsed discovery/authoring workflows into a single conversational surface; eliminated context-switching; achieved ~40% operational time savings |
@@ -36,10 +38,10 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | Enterprise analytics platform turning natural-language business questions into governed SQL queries, inisghts, and visualizations. As a strategic system this tool traces stakeholder questions to predefined proprietary metric definitions, generates auditable SQL with explanation, and surfaces both raw results and business-friendly summaries and visuals—enabling non-technical business leaders (recruiters, HR partners, finance stakeholders) to self-serve complex analytics |
+| **What** | Enterprise analytics platform turning natural-language business questions into governed SQL queries, insights, and visualizations. As a strategic system, this tool traces stakeholder questions to predefined proprietary metric definitions, generates auditable SQL with explanations, surfaces raw results, surfaces and business-friendly summaries, and creates visuals that enabling non-technical business leaders (recruiters, HR partners, finance stakeholders) to self-serve complex analytics |
 | **Why** | Talent Acquisition, HR, and Finance teams faced analytics bottlenecks; recurring questions like "time-to-fill by division?" or "workforce movement trends?" required weeks of ad-hoc analyst requests, delaying business decisions |
-| **How** | Multi-step prompt chaining (intent interpretation → metric mapping → SQL generation → validation) + four-layer data protection (AWS Guardrails/metadata abstraction/aggregation constraints/row-level filtering) + manifest-driven architecture for multi-line-of-business deployment |
-| **Innovation** | Translated ambiguous stakeholder knowledge into a reusable semantic layer (metric definitions, business rules, organizational hierarchies) that persists across queries; manifest-driven config lets new business units onboard via S3 metadata without re-engineering; governance controls baked into architecture|
+| **How** | Multi-step prompt chaining (intent interpretation → metric mapping → SQL generation → validation) + four-layer data protection (AWS Guardrails/metadata abstraction/aggregation constraints/row-level filtering) |
+| **Innovation** | Translated ambiguous stakeholder knowledge into a reusable semantic layer (metric definitions, business rules, organizational hierarchies) that persists across queries; manifest-driven configuration lets new business units onboard via S3 metadata without re-engineering; governance controls baked into architecture|
 | **Impact** | ~$1.0M NPV (5-year); 846–1,487 annual analyst hours saved; reusable architecture enabling rapid expansion to new lines of business with minimal engineering overhead |
 
 </details>
