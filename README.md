@@ -23,10 +23,10 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | OIDC-authenticated LLM copilot that classifies analyst intent and routes to specialized RAG pipelines grounded in Vanguard's semantic data layer |
+| **What** | Gen AI copilot that classifies analyst intent and routes to specialized RAG pipelines grounded in contextual business data performing code discovery, code modification, data discovery and sqk generation. |
 | **Why** | HR analysts spent 40%+ of time on repetitive translation work: converting ambiguous questions into valid SQL and discovering the right data tables |
-| **How** | Strategy-pattern dispatch layer + Bedrock RAG with category-scoped retrieval + dynamic semantic/metric layer injection + adaptive prompt-length enforcement |
-| **Innovation** | Semantic layer-aware prompt composition baking in business rules, grade dictionaries, and organizational hierarchies to ensure generated SQL respects governance |
+| **How** | LLM routes user intent to the appropriate handler (discovery/SQL/code) + retrieves relevant context from knowledge base + dynamically injects business rules and data definitions into prompts |
+| **Innovation** | Embeds organizational hierarchies and data definitions directly into prompts, ensuring generated responses automatically respect governance without manual rule-writing |
 | **Impact** | Collapsed discovery/authoring workflows into a single conversational surface; eliminated context-switching; achieved ~40% operational time savings |
 
 </details>
