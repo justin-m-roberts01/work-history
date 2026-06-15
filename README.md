@@ -62,11 +62,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 | | |
 | :--- | :--- |
-| **What** | RoBERTa-based primary classifier + XGBoost secondary ensemble targeting false negatives, achieving 100% recall on regulatory complaints |
-| **Why** | Production classifier had 97% recall; missing even 1 complaint per month creates FINRA reporting gaps and regulatory risk |
-| **How** | PCA + Andrews Curves diagnosis of false-negative patterns → 50-feature semantic extraction (syntactic/semantic/topic/keyword signals) → recursive feature elimination → confidence-gated secondary routing |
-| **Innovation** | Generative data augmentation (LLM + synthetic oversampling + adversarial perturbation suite); long-text remediation (split-and-max scoring for 70+ word texts) |
-| **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor; zero retraining risk (secondary model only) |
+| **What** | RoBERTa primary classifier + XGBoost secondary ensemble targeting known false negative range from primary classifier, achieving 100% recall on regulatory complaints |
+| **Why** | Production classifier had 97% recall; missing even 1 complaint per month creates FINRA reporting gaps and serious regulatory risk |
+| **How** | Diagnosed false-negative patterns using PCA + Andrews Curves visualization on primary classifier training daata embeddings → identified the specific confidence range where misses (false negative) occurred → trained XGBoost as a "second opinion" model on that borderline range, using 50 semantic features (syntactic/topic/keyword signals) → routed uncertain predictions through both classifiers for validation |
+| **Innovation** | Generated synthetic hard cases using LLM augmentation and adversarial perturbations (typos, noise, edge cases) to teach the secondary model robustness on complaint patterns the primary model struggled with; built this as an additional layer. zero retraining of production RoBERTa |
+| **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor; zero risk to production systems (secondary model only) |
 
 </details>
 
