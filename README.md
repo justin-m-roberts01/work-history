@@ -18,7 +18,9 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 ## 📋 Project Highlights
 
-### **Analyst Assistant** — Multi-Intent Generative-AI Copilot for HR Analytics
+<details>
+<summary><strong>Analyst Assistant</strong> — Multi-Intent Generative-AI Copilot for HR Analytics</summary>
+
 | | |
 | :--- | :--- |
 | **What** | OIDC-authenticated LLM copilot that classifies analyst intent and routes to specialized RAG pipelines grounded in Vanguard's semantic data layer |
@@ -27,7 +29,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **Innovation** | Semantic layer-aware prompt composition baking in business rules, grade dictionaries, and organizational hierarchies to ensure generated SQL respects governance |
 | **Impact** | Collapsed discovery/authoring workflows into a single conversational surface; eliminated context-switching; achieved ~40% operational time savings |
 
-### **Agentic Analyst Platform** — Governed GenAI Analytics System (Technical Lead + Product Owner)
+</details>
+
+<details>
+<summary><strong>Agentic Analyst Platform</strong> — Governed GenAI Analytics System (Technical Lead + Product Owner)</summary>
+
 | | |
 | :--- | :--- |
 | **What** | Metadata-driven NL → SQL → insight pipeline that turns natural-language business questions into governed, auditable analytics without exposing raw data |
@@ -36,7 +42,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **Innovation** | Manifest-driven configuration engine: onboard a new business unit via S3 metadata rather than re-engineering; cleared enterprise AI governance (AIDP/SAR/PRA) by baking controls into architecture |
 | **Impact** | ~$1.0M NPV (5-year); 846–1,487 annual analyst hours saved; scaled from HR to recruiting with minimal re-engineering |
 
-### **Marketing History Graph Neural Network** — Client Interaction Encoding (GNN)
+</details>
+
+<details>
+<summary><strong>Marketing History Graph Neural Network</strong> — Client Interaction Encoding (GNN)</summary>
+
 | | |
 | :--- | :--- |
 | **What** | Two-stage GNN pipeline encoding 500+ client marketing impressions into dense 128-dim embeddings powering offer personalization |
@@ -45,7 +55,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **Innovation** | Learned gated fusion mechanism dynamically blends attention with mean-pooling; stratified temporal sampling for high-engagement clients avoiding degenerate softmax collapse |
 | **Impact** | Unlocked new personalization dimension; improved decision engine feature space; validated across single-touch and 500+ impression cohorts |
 
-### **FINRA Regulatory Complaint Detector** — NLP Ensemble for Perfect Compliance
+</details>
+
+<details>
+<summary><strong>FINRA Regulatory Complaint Detector</strong> — NLP Ensemble for Perfect Compliance</summary>
+
 | | |
 | :--- | :--- |
 | **What** | RoBERTa-based primary classifier + XGBoost secondary ensemble targeting false negatives, achieving 100% recall on regulatory complaints |
@@ -54,7 +68,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **Innovation** | Generative data augmentation (LLM + synthetic oversampling + adversarial perturbation suite); long-text remediation (split-and-max scoring for 70+ word texts) |
 | **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor; zero retraining risk (secondary model only) |
 
-### **Utility Pipe Failure Prediction** — Survival Analysis for Infrastructure Maintenance
+</details>
+
+<details>
+<summary><strong>Utility Pipe Failure Prediction</strong> — Survival Analysis for Infrastructure Maintenance</summary>
+
 | | |
 | :--- | :--- |
 | **What** | Multi-modal predictive system combining asset telemetry, environmental variables, and fault history to forecast structural failures in subsurface utility pipes |
@@ -63,7 +81,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **Innovation** | Integrated censored-data modeling (pipes that hadn't yet failed); stratified feature engineering across material/soil/environmental domains |
 | **Impact** | 93% accuracy within 30-month prediction window; $436K annual savings in targeted maintenance; optimized excavation scheduling |
 
-### **Property Type Attribute Extraction** — Multi-Task Sequential Deep Learning with Computer Vision
+</details>
+
+<details>
+<summary><strong>Property Type Attribute Extraction</strong> — Multi-Task Sequential Deep Learning with Computer Vision</summary>
+
 | | |
 | :--- | :--- |
 | **What** | Multi-task neural network extracting structural metadata (stories, foundation type, finished floor height) from Google Street View imagery |
@@ -72,7 +94,11 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **Innovation** | Information gain loop: downstream tasks benefit from semantic abstractions learned by upstream classifiers, optimizing predictive power for high-value targets |
 | **Impact** | 60% reduction in field surveying costs; enabled automated flood-risk mapping and rapid real-estate categorization at scale |
 
-### **Material Cost Classification & Database** — NLP Pipeline for Unstructured Data Standardization
+</details>
+
+<details>
+<summary><strong>Material Cost Classification & Database</strong> — NLP Pipeline for Unstructured Data Standardization</summary>
+
 | | |
 | :--- | :--- |
 | **What** | Automated pipeline extracting, cleaning, and classifying a decade of unstructured contractor bid/cost data into a centralized, queryable database |
@@ -80,6 +106,8 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **How** | OCR ingestion (PDF/CSV/Excel parsing) → schema normalization → zero-shot semantic classification (Hugging Face transformers) → confidence-gated fallback for ambiguous items |
 | **Innovation** | Confidence-gated human-in-the-loop loop for low-confidence predictions, preserving data fidelity while scaling automation |
 | **Impact** | 3x faster cost estimate generation; centralized institutional cost intelligence; enabled engineers to leverage historical trends |
+
+</details>
 
 ---
 
