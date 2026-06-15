@@ -16,7 +16,7 @@ Each document is a technical narrative—covering the challenge, the architectur
 
 ---
 
-## 📋 Project Highlights
+## 📋 Project Summaries and Highlights
 
 <details>
 <summary><strong>Analyst Assistant</strong> — Multi-Intent Generative-AI Copilot for HR Analytics</summary>
@@ -114,14 +114,15 @@ Each document is a technical narrative—covering the challenge, the architectur
 ## 📊 Impact Snapshot
 
 **Enterprise-Grade AI & Analytics**
-- Built production LLM systems serving HR analysts, reducing workflows from hours to minutes
-- Designed specialized neural networks processing millions of client interactions for personalized financial recommendations
-- Deployed NLP systems achieving 100% regulatory compliance detection while cutting manual review costs by ~$600K annually
+- Built production LLM systems serving HR analysts and business leaders, collapsing repetitive workflows (discovery/authoring/analytics) from hours to minutes
+- Architected governed analytics platforms that translated ambiguous business questions into auditable SQL and insights, enabling non-technical stakeholders to self-serve complex analytics (~$1M NPV, 846–1,487 hours saved annually)
+- Designed specialized graph neural networks encoding millions of client marketing interactions into dense embeddings, unlocking new personalization dimensions for financial product recommendations
+- Deployed NLP ensembles achieving 100% regulatory compliance detection while eliminating ~$600K in annual manual review labor
 
 **Infrastructure & Risk Intelligence**
-- Created predictive systems for municipal utility maintenance, identifying failures before they occur (93% accuracy, $436K in annual savings)
-- Automated property attribute extraction from imagery, reducing surveying costs by 60%
-- Built cost-prediction systems accelerating engineering estimates 3x through historical data synthesis
+- Created predictive systems for municipal utility maintenance using survival analysis, identifying failures before they occur (93% accuracy, $436K annual savings, optimized excavation scheduling)
+- Automated property attribute extraction from imagery and LiDAR data, reducing field surveying costs by 60% and enabling real-time flood-risk assessment at scale
+- Standardized two decades of unstructured contractor bid data into a centralized, queryable database, accelerating engineering cost estimates 3x and enabling downstream ML/GenAI use cases
 
 ---
 
@@ -135,30 +136,3 @@ Each document is a technical narrative—covering the challenge, the architectur
 | **Cloud & Production** | AWS (SageMaker, Bedrock, Lambda, ECS Fargate, Athena), containerization, OIDC/enterprise auth, KMS encryption, structured telemetry |
 | **Data Engineering & Feature Work** | Handling imbalanced classes, stratified sampling, adversarial robustness testing, multi-modal feature synthesis, long-text remediation |
 | **Product & Leadership** | Use-case strategy, value modeling, cross-functional stakeholder translation, AI governance (AIDP/SAR), platform scalability design |
-
----
-
-## 🔑 What Stands Out
-
-**1. End-to-End Ownership**
-Each project moves from problem definition through measurement. I don't just build models—I quantify the business impact, from cost savings to operational hours recovered to regulatory risk elimination.
-
-**2. Production Rigor**
-These aren't prototypes. Systems are deployed behind enterprise authentication, running on encrypted infrastructure, instrumented with feedback loops, and designed for cross-functional reuse.
-
-**3. Complexity Without Jargon**
-I move fluidly between deep technical work (multi-head attention, survival curves, adversarial perturbation suites) and clear communication. The details matter, but so does impact.
-
-**4. Strategic Thinking**
-Increasingly, my work bridges engineering and business—designing systems that are not just technically sound but strategically aligned and governable at enterprise scale.
-
----
-
-## 🤝 Let's Talk
-
-If you'd like to discuss any of these projects, dive into specific technical decisions, or explore how these approaches might apply to your challenges, I'm open to conversation.
-
----
-
-**Last updated:** June 2026  
-**Repository:** [justin-m-roberts01/work-history](https://github.com/justin-m-roberts01/work-history)
