@@ -10,9 +10,19 @@ This repository contains detailed documentation of projects I've led across my c
 
 1. **[Senior AI/ML Engineer at Vanguard](./Senior%20AI-ML%20Engineer%20(Vanguard).md)** — Building enterprise AI systems for HR and workforce analytics
 2. **[Data Scientist at Vanguard](./Data%20Scientist%20(Vanguard).md)** — Designing neural networks and NLP systems for marketing personalization and compliance
-3. **[AI/ML Engineer at Halff Associates](./AI-ML%20Engineer%20(Halff%20Associates).md)** — End-to-end ML systems for infrastructure, real estate, and land-use surveyring operations
+3. **[AI/ML Engineer at Halff Associates](./AI-ML%20Engineer%20(Halff%20Associates).md)** — End-to-end ML systems for infrastructure, real estate, and land-use surveying operations
 
 Each document is a technical narrative—covering the challenge, the architecture, and the measurable business impact.
+
+---
+
+## 📋 Summary of Work
+
+**At Vanguard**, I've designed and shipped enterprise-grade generative AI systems that bridge engineering and business strategy. Most recently, I architected the **Analyst Assistant**—a multi-intent RAG copilot serving HR teams at scale with OIDC authentication, semantic grounding, and production safety guardrails. Before that, I led the **Agentic Analyst Platform** from strategy through governance approval, authoring a ~$1M NPV business case and operationalizing a metadata-driven analytics system that turns natural language into governed insights. Earlier in my Data Scientist role, I built a **Graph Neural Network pipeline** that encodes complete client marketing histories into dense embeddings (unlocking personalization for a financial decision engine) and architected an **NLP ensemble** that achieved 100% recall on regulatory complaints while cutting false positives and operational costs.
+
+**At Halff Associates**, I owned the full ML lifecycle across diverse domains—deploying **predictive survival models** for municipal utility infrastructure that identified failures before they occur (93% accuracy, $436K annual savings), building **computer vision networks** that automated property attribute extraction from imagery (60% cost reduction), designing **NLP pipelines** that standardized a decade of unstructured cost documentation, and prototyping **reinforcement learning systems** for route optimization.
+
+Across all roles, the pattern is consistent: **define the problem rigorously, architect solutions that scale, measure impact quantitatively, and deliver systems production-hardened for enterprise use.**
 
 ---
 
@@ -27,30 +37,6 @@ Each document is a technical narrative—covering the challenge, the architectur
 - Created predictive systems for municipal utility maintenance, identifying failures before they occur (93% accuracy, $436K in annual savings)
 - Automated property attribute extraction from imagery, reducing surveying costs by 60%
 - Built cost-prediction systems accelerating engineering estimates 3x through historical data synthesis
-
----
-
-## 💡 How to Read This Portfolio
-
-### If you have 5 minutes:
-Start here. This README gives you the lay of the land and key metrics.
-
-### If you have 15–30 minutes:
-Read the **[Data Scientist](./Data%20Scientist%20(Vanguard).md)** role first. It showcases the full spectrum of skills: neural network design, NLP/text analysis, handling imbalanced real-world data, and cross-functional problem-solving. Two signature projects:
-
-1. **Marketing History Graph Neural Network** — A two-stage GNN pipeline that encodes 500+ client interactions into dense embeddings, unlocking a new dimension of personalization for a financial decision engine
-2. **Regulatory Compliance Detector** — An NLP ensemble that achieved perfect recall on financial complaints while cutting false positives and saving $600K in manual review
-
-### If you have 30–45 minutes:
-Read the **[Senior AI/ML Engineer](./Senior%20AI-ML%20Engineer%20(Vanguard).md)** role next. This captures more recent work bridging AI systems and business strategy:
-
-1. **Analyst Assistant** — A conversational AI copilot that translates natural language into data queries, serving HR teams at enterprise scale (OIDC auth, semantic grounding, guardrails)
-2. **Agentic Analyst Platform** — The full product lifecycle: strategy, $1M+ NPV modeling, governance sign-off, and architecting a reusable blueprint for governed AI analytics across business units
-
-This role emphasizes the strategic and leadership dimensions—moving beyond implementation to product thinking and enterprise adoption.
-
-### If you have 45+ minutes:
-Explore the **[Halff Associates](./AI-ML%20Engineer%20(Halff%20Associates).md)** role for breadth. It spans computer vision, survival analysis, reinforcement learning, and operations automation—showing how ML principles apply across very different problem domains.
 
 ---
 
@@ -80,15 +66,6 @@ I move fluidly between deep technical work (multi-head attention, survival curve
 
 **4. Strategic Thinking**
 Increasingly, my work bridges engineering and business—designing systems that are not just technically sound but strategically aligned and governable at enterprise scale.
-
----
-
-## 📖 How to Navigate
-
-- **Skim headers and "Impact & Business Value" sections** to get quick wins without diving into architecture.
-- **Study the implementation details** if you want to understand my approach to technical problem-solving.
-- **Review the tech stacks** to see tools and frameworks I work with confidently.
-- **Look for patterns** across roles—you'll see recurring themes (handling data imbalance, semantic grounding, enterprise safety) applied to different domains.
 
 ---
 
