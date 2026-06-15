@@ -8,9 +8,9 @@ Welcome to my work portfolio! This repository documents my professional work bui
 
 This repository contains detailed documentation of projects I've led across my current and previous positions:
 
-1. **[Senior AI/ML Engineer at Vanguard](./Senior%20AI-ML%20Engineer%20(Vanguard).md)** (2026–Present) — Building enterprise AI systems for HR and workforce analytics
-2. **[Data Scientist at Vanguard](./Data%20Scientist%20(Vanguard).md)** (2024–2026) — Designing neural networks and NLP systems for marketing personalization and compliance
-3. **[AI/ML Engineer at Halff Associates](./AI-ML%20Engineer%20(Halff%20Associates).md)** (2023–2024) — End-to-end ML systems for infrastructure, real estate, and land-use surveying operations
+1. **[Senior AI/ML Engineer @ Vanguard](./Senior%20AI-ML%20Engineer%20(Vanguard).md)** (2026–Present) — Building enterprise AI systems for HR and workforce analytics
+2. **[Data Scientist @ Vanguard](./Data%20Scientist%20(Vanguard).md)** (2024–2026) — Designing neural networks and NLP systems for marketing personalization and compliance
+3. **[AI/ML Engineer @ Halff Associates](./AI-ML%20Engineer%20(Halff%20Associates).md)** (2023–2024) — End-to-end ML systems for infrastructure, real estate, and land-use surveying operations
 
 Each document is a technical narrative—covering challenges, architecture, and the measurable business impact.
 
