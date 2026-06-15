@@ -64,10 +64,10 @@ Each document is a technical narrative—covering challenges, architecture, and 
 
 | | |
 | :--- | :--- |
-| **What** | RoBERTa primary classifier + XGBoost 'second opinion' model designed to accurately classify potential falely negative classified inputs to the primary classifier, achieving 100% recall on regulatory complaints |
+| **What** | RoBERTa primary classifier + XGBoost 'second opinion' model designed to accurately classify falsely negative outputs from the primary classifier. Achieving 100% recall on regulatory complaints |
 | **Why** | Primary RoBERTa classifier had 97% recall; missing even 1 complaint per month creates FINRA reporting gaps and serious regulatory risk |
-| **How** | Diagnosed false-negative patterns using PCA + Andrews Curves visualizations of labeled text embeddings → identified the specific prediction range (*False Negative Risk Range*) and semantic patterns of false negative outputs coming from the primary RoBERTa model → Using semantic features (syntactic/topic/keyword signals) I trained an XGBoost classifier as a "second opinion" model specialized in accurate classification of potential False negative outputs from the primary RoBERTa model  → routed predictions through both classifiers for second opinion when appropriate |
-| **Innovation** | Generated synthetic cases using LLM augmentation and adversarial perturbations (typos, noise, edge cases) to teach the second opinion model robustness on complaint patterns the primary model struggled with; Zero retraining of production RoBERTa |
+| **How** | Diagnosed false-negative patterns using PCA + Andrews Curve visualizations of labeled text embeddings → identified the specific prediction range (*False Negative Risk Range*) and semantic patterns of false negative outputs coming from the primary RoBERTa model → Using semantic features (syntactic/topic/keyword signals) I trained an XGBoost classifier as a "second opinion" model specialized in accurate classification of potential false negative outputs coming from the primary RoBERTa model  → routed predictions through both classifiers for second opinion when appropriate |
+| **Innovation** | Generated synthetic data samples using LLM augmentation and adversarial perturbations (typos, noise, edge cases) to teach the second opinion model robustness on complaint patterns the primary model struggled with; Zero retraining of production RoBERTa |
 | **Impact** | Elevated recall to 100%; reduced false positives by 3%; eliminated ~$600K in annual manual review labor |
 
 </details>
