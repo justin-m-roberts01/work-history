@@ -60,7 +60,7 @@ Each document is a technical narrative—covering challenges, architecture, and 
 </details>
 
 <details>
-<summary><strong>FINRA Regulatory Complaint Detection</strong> — NLP Ensemble for Perfect Compliance</summary>
+<summary><strong>FINRA Regulatory Complaint Detection</strong> — NLP Ensemble for Regulatory Compliance</summary>
 
 | | |
 | :--- | :--- |
