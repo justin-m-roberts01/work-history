@@ -137,4 +137,4 @@ Each document is a technical narrative—covering challenges, architecture, and 
 | **Classical & Ensemble ML** | XGBoost ensembling, survival analysis (Random Survival Forests), recursive feature elimination, deep feature synthesis |
 | **Cloud & Production** | AWS (SageMaker, Bedrock, Lambda, ECS Fargate, Athena), containerization, OIDC/enterprise auth, KMS encryption, structured telemetry |
 | **Data Engineering & Feature Work** | Handling imbalanced classes, stratified sampling, adversarial robustness testing, multi-modal feature synthesis, long-text remediation |
-| **Product & Leadership** | Use-case strategy, value modeling, cross-functional stakeholder translation, AI governance (AIDP/SAR), platform scalability design |
+| **Product & Leadership** | Use-case strategy, value modeling, cross-functional stakeholder translation, AI governance (Security Architecture Review, Privacy Risk Assesment, etc), platform scalability design |
