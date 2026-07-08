@@ -1,0 +1,36 @@
+NEW EMPLOYEE ONBOARDING GUIDE — ACME CORP
+Last Updated: February 2025
+
+== WEEK 1: SETUP ==
+Day 1: Attend orientation session at 9am with HR (Building A, Room 102).
+Day 1: Collect laptop and badge from IT desk (Building B, Lobby).
+Day 1: Complete I-9 verification — bring two forms of ID.
+Day 2: Complete all mandatory compliance training modules in the LMS (due by end of Week 2).
+Day 3: Schedule 1:1 with your direct manager to align on 30/60/90-day goals.
+Day 5: Submit your direct deposit information to Payroll via the HR portal.
+
+== WEEK 2: ROLE ONBOARDING ==
+Meet with at least 3 teammates for introductory calls.
+Request access to all required systems through the IT Service Desk.
+Review team documentation and project backlogs.
+Attend your first team standup and sprint planning (if applicable).
+Complete your benefits enrollment — deadline is 30 days from start date.
+
+== KEY CONTACTS ==
+HR Business Partner: hr-support@acme.com
+IT Service Desk: it-help@acme.com | ext. 5555
+Payroll: payroll@acme.com
+Security Team: security@acme.com
+Facilities: facilities@acme.com
+
+== FIRST 90 DAYS ==
+30-day goal: Understand team structure, tools, and 2–3 active workstreams.
+60-day goal: Own at least one task or project component end-to-end.
+90-day goal: Deliver a meaningful contribution and complete your first performance self-assessment.
+Your manager will conduct a formal 90-day check-in to review your progress.
+
+== IMPORTANT DEADLINES ==
+Benefits enrollment: within 30 days of start date (no exceptions — missed window = wait until open enrollment).
+Direct deposit setup: by end of Week 1 (to ensure first paycheck is direct deposited).
+Compliance training: within 14 days of start date.
+Equipment acknowledgment form: within 3 days of receiving corporate devices.
