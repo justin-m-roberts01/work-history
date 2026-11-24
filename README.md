@@ -51,11 +51,11 @@ Each document is a technical narrative—covering challenges, architecture, and 
 
 | | |
 | :--- | :--- |
-| **What** | Two-stage graph neural network pipeline that encodes complete marketing campaign histories (product offers, recency, frequency, outcomes) into dense 128-dimension embeddings for each client. Supplying Vanguard product recommendation engines with additional reasoning capability for offer personalization, impression fatigue awareness, and temporally aware reccomndations |
+| **What** | Two-stage graph neural network pipeline that encodes complete marketing campaign histories (product offers, recency, frequency, outcomes) into dense 64-dimension embeddings for each client. Supplying Vanguard product recommendation engines with additional reasoning capability for offer personalization, impression fatigue awareness, and temporally aware reccomndations |
 | **Why** | Existing product recommendation engines had no awareness of individual clients marketing campaign history (frequency, recency, or temporal patterns); clients saw repeated offers, throttling engagement and wasting marketing spend |
 | **How** | Built a bipartite graph connecting clients to their marketing campaign histories. First stage uses TransformerConv to learn encodings of individual campaign event sequences → Second stage adaptively aggregates campaign sequences into a single embedding for each client |
 | **Innovation** | Trained a gated fusion mechanism to intelligently blend attention-based history aggregation (effective for high-engagement clients with 100+ campaign impressions) with mean-pooling aggregation (effective for single-campaign impression clients); the model learns how much of each method to use based on the count of campaigns a client has been exposed to. Eliminating need to hand-tune separate models  |
-| **Impact** | Unlocked new personalization dimension (impression fatigue awareness); improved Vanguard product reccomndation engine feature space |
+| **Impact** | Offer-level AUC 0.711 → 0.856 (+14.5 pp), placement-level AUC 0.699 → 0.831 (+13.2 pp), top-decile lift 1.82 → 2.41 (+32%) in offline validation on a 95K-client sample; unlocked impression-fatigue and timing awareness. Estimated ~$1.0M/yr conservative value (~$3M NPV, 5-yr net of run cost) from conversion lift, reduced wasted/repeat outreach, and fewer client opt-outs (*modeled estimate; see Vanguard role file for assumptions*) |
 
 </details>
 
@@ -118,7 +118,7 @@ Each document is a technical narrative—covering challenges, architecture, and 
 **Enterprise-Grade AI & Analytics**
 - Built production LLM systems serving HR analysts and business leaders, collapsing repetitive workflows (discovery/authoring/analytics) from hours to minutes
 - Architected governed analytics platforms that translated ambiguous business questions into auditable SQL and insights, enabling non-technical stakeholders to self-serve complex analytics (~$1M NPV, 846–1,487 hours saved annually)
-- Designed specialized graph neural networks encoding millions of client marketing interactions into dense embeddings, unlocking new personalization dimensions for financial product recommendations
+- Designed specialized graph neural networks encoding millions of client marketing interactions into dense embeddings, lifting offer-level AUC 0.711 → 0.856 and top-decile lift +32% offline; conservatively modeled at ~$1.0M/yr (~$3M 5-yr NPV) while reducing repeat-offer fatigue
 - Deployed NLP ensembles achieving 100% regulatory compliance detection while eliminating ~$600K in annual manual review labor
 
 **Infrastructure & Risk Intelligence**

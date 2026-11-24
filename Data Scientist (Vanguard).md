@@ -28,7 +28,7 @@ The solution had to encode highly variable client interaction histories (single-
 
    Trained with **6 simultaneous reconstruction objectives** — categorical heads (outcome, theme, offer, channel, placement) using cross-entropy with inverse-frequency class weighting; continuous head (days-since-event) using Smooth L1 loss — across 300 epochs with early stopping driven by validation MAE on the temporal reconstruction task.
 
-3. **Model 2 — Client Aggregation Model (128-dim):** Built a multi-head attention aggregator featuring **three specialized heads**:
+3. **Model 2 — Client Aggregation Model (64-dim):** Built a multi-head attention aggregator featuring **three specialized heads**:
    * **Recency Head** — Exponential decay weighting prioritizing the freshest impressions
    * **Frequency Head** — Learned attention over temporal interaction patterns
    * **Context Head** — Content-based attention over offer diversity
@@ -58,7 +58,13 @@ The solution had to encode highly variable client interaction histories (single-
 8. **Stratified Validation Diagnostics:** Tracked all metrics separately for single-impression vs. multi-impression cohorts (regression MAE / R² / Pearson; classification per-class accuracy, confusion matrices, Top-K accuracy for high-cardinality targets like offer name) and visualized learned gate values against impression counts to verify adaptive blending behavior. Aggregated all task scores into a single **RL Readiness Score** to track production fitness over training.
 
 ##### 📈 Impact & Business Value
-* **Decision Engine Augmentation:** Delivered production-ready 128-dim client embeddings encoding complete marketing histories — enabling the XGBoost Decision Engine to incorporate impression fatigue signals, temporal patterns, and channel/placement context directly into Next Best Action recommendations.
+* **Decision Engine Augmentation:** Delivered 64-dim client embeddings encoding complete marketing histories — enabling the XGBoost Decision Engine to incorporate impression fatigue signals, temporal patterns, and channel/placement context directly into Next Best Action recommendations.
+* **Measured Offline Lift (95K-client balanced sample):** Offer-level AUC 0.711 → 0.856 (+14.5 pp); placement-level AUC 0.699 → 0.831 (+13.2 pp); top-decile lift 1.82 → 2.41 (+32% relative). SHAP confirmed embedding dimensions rank among top-10 features. *Caveat: offline, sample-based; leakage-adjusted temporal validation in progress.*
+* **Estimated Financial Value (modeled, conservative — assumptions in brackets):** ~**$1.0M/yr gross**, ~**$0.85M/yr net** of ~$150K/yr run cost (weekly regeneration, SageMaker, maintenance), ≈ **$3M NPV over 5 years at 9%** (range ~$2M–$6M):
+  * *Conversion lift (~$0.85M/yr):* [~7M contacts/yr of ~50M clients × 1% baseline conversion × 32% top-decile lift haircut to 25% realization (~8% relative) × $150 value/conversion]; ~$1.7M at 50% realization.
+  * *Wasted outreach avoided (~$35K/yr):* [7M contacts × 10% repeat-exposure × ~$0.05 blended cost/contact]
+  * *Opt-out/attrition avoidance (~$100K/yr):* [~0.3% baseline opt-out rate × 10% reduction from fewer repeat offers × ~$50 value per reachable client]
+* **Client Experience & Brand Value (not priced):** Fewer repeated offers means less perceived spam, better client care, and stronger trust in Vanguard communications; timing-aware outreach reduces over-contact and supports responsible-marketing posture.
 * **Unlocked New Predictive Surface:** Enabled future modeling of optimal *timing* recommendations in addition to existing offer/channel/placement targets — a previously inaccessible axis of personalization.
 * **Cohort-Robust Performance:** Achieved consistent embedding quality across both single-touch and high-engagement clients, validated through stratified diagnostics rather than aggregate metrics that would have hidden cohort-level failures.
 
