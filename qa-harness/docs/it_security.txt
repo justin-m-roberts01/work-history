@@ -1,0 +1,37 @@
+IT SECURITY POLICY — ACME CORP
+Last Updated: March 2025
+
+== SECTION 1: PASSWORD REQUIREMENTS ==
+All passwords must be at least 12 characters long.
+Passwords must include uppercase, lowercase, a number, and a special character.
+Passwords must be rotated every 90 days.
+Password reuse is prohibited for the last 10 passwords.
+Multi-factor authentication (MFA) is mandatory for all corporate accounts.
+
+== SECTION 2: DATA CLASSIFICATION ==
+Data is classified into four tiers: Public, Internal, Confidential, and Restricted.
+Restricted data includes PII, financial records, and employee compensation data.
+Confidential data must be encrypted at rest and in transit.
+Restricted data may not be stored on personal devices under any circumstances.
+Any data breach must be reported to the Security team within 1 hour of discovery.
+
+== SECTION 3: DEVICE POLICY ==
+All corporate laptops must have full-disk encryption enabled.
+Personal devices may access corporate email only through the approved MDM profile.
+USB drives are prohibited on corporate devices without explicit Security team approval.
+Screen lock must activate after 5 minutes of inactivity.
+Lost or stolen devices must be reported within 2 hours.
+
+== SECTION 4: INCIDENT RESPONSE ==
+Security incidents are classified as Critical, High, Medium, or Low severity.
+Critical incidents require a response within 15 minutes and executive notification.
+All incidents must be logged in the Security ticketing system within 24 hours.
+Post-incident reviews are mandatory for Critical and High severity events.
+Employees must never attempt to investigate a security incident themselves.
+
+== SECTION 5: ACCEPTABLE USE ==
+Corporate systems may not be used for personal business or profit-generating activities.
+Access to competitor systems or data, even publicly available, requires Legal approval.
+Employees may not install unapproved software on corporate devices.
+All third-party software integrations must pass a Security Architecture Review.
+VPN must be active when accessing corporate resources from public networks.
